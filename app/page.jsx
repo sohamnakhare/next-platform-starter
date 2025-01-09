@@ -4,6 +4,7 @@ import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
+import { IFrame } from 'components/Iframe';
 
 const cards = [
     //{ text: 'Hello', linkText: 'someLink', href: '/' }
@@ -28,6 +29,7 @@ And as always with dynamic content, beware of layout shifts & flicker! (here, we
 const ctx = getNetlifyContext();
 
 export default function Page() {
+
     return (
         <main className="flex flex-col gap-8 sm:gap-16">
             <section className="flex flex-col items-start gap-3 sm:gap-4">
@@ -52,6 +54,7 @@ export default function Page() {
                 <RandomQuote />
                 <Markdown content={postDynamicContentExplainer} />
             </section>
+            <IFrame />
             {/* !!cards?.length && <CardsGrid cards={cards} /> */}
         </main>
     );
