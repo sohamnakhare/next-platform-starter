@@ -8,7 +8,7 @@ const IFrame = () => {
         window.addEventListener("message", function(event) {
             // Verify that the message is coming from the expected domain
             if (event.origin === vercelDomain) {
-                console.log("Message from parent:", event.data);
+                console.log("From Netlify :: Message from parent:", event.data);
                 // Send a response back to the parent
                 event.source.postMessage("Hello from netlify!", event.origin);
             } else {
