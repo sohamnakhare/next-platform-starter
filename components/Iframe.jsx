@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 
 const IFrame = () => {
-    const vercelDomain = 'https://nextjs-boilerplate-six-xi-25.vercel.app/'
+    const vercelDomain = 'https://nextjs-boilerplate-six-xi-25.vercel.app'
     useEffect(() => {
         window.addEventListener("message", function(event) {
             // Verify that the message is coming from the expected domain
