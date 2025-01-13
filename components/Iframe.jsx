@@ -10,7 +10,7 @@ const IFrame = () => {
             if (event.origin === vercelDomain) {
                 console.log("Log from child :: Message from parent:", event.data);
                 // Send a response back to the parent
-                event.source.postMessage("Hello from child!", event.origin);
+                // event.source.postMessage("Hello from child!", event.origin);
             } else {
                 console.error("Received message from untrusted origin:", event.origin);
             }
