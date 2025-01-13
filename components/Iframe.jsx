@@ -8,9 +8,9 @@ const IFrame = () => {
         window.addEventListener("message", function(event) {
             // Verify that the message is coming from the expected domain
             if (event.origin === vercelDomain) {
-                console.log("From Netlify :: Message from parent:", event.data);
+                console.log("Log from child :: Message from parent:", event.data);
                 // Send a response back to the parent
-                event.source.postMessage("Hello from netlify!", event.origin);
+                event.source.postMessage("Hello from child!", event.origin);
             } else {
                 console.error("Received message from untrusted origin:", event.origin);
             }
